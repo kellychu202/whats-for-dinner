@@ -6,42 +6,52 @@
         <title>First HTML Test</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="test.js"></script>
     </head>
 
-    <header>
-      <h1>hi home</h1>
-    </header>
-    <div class="topnav" id="myTopnav">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="page_one.html">First</a></li>
-        </ul>
-    </div>
     <body>
-        <p>
-          <ol>
-            <li>surprise me completely random</li>
-            <li><strong>random common home foods
-              <ol>
-                <li><strong>time slider option</strong></li>
-                <li>one based on ingrediants</li>
-              </ol>
-            </strong></li>
-            <li>popular from the internet</li>
-          </ol>
-        </p>
-
+      <div class="topnav" id="myTopnav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="page_one.html">First</a></li>
+        </ul>
+      </div>
+      <header>
+        <h1>What's For Dinner?</h1><br>
+      </header>
         <div class="row">
           <div class="column">
             <h2>Home Cooked Meals</h2>
             <p>
               what
             </p>
+            <p>
+              <ol>
+                <li>surprise me completely random</li>
+                <li><strong>random common home foods
+                  <ol>
+                    <li><strong>time slider option</strong></li>
+                    <li>one based on ingrediants</li>
+                  </ol>
+                </strong></li>
+                <li>popular from the internet</li>
+              </ol>
+            </p>
           </div>
-
           <div class="column">
             <h2>Surprise Me Feast</h2>
+            <button class="surprise" onclick="randFood()">
+              <a href="page_one.html">SURPRISE ME!</a>
+            </button>
             <p>yeehaw</p>
+            <form>
+              <label for="foodinput">Insert new food:</label><br>
+              <input type"text" id="foodinput"><br><br>
+              <input type="button" value="Submit" id="add" onclick="inputs()">
+              <p>Added new food(s):</p>
+              <ul id="list"></ul>
+            </form>
           </div>
 
           <div class="column">
